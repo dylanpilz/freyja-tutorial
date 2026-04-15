@@ -2,7 +2,7 @@ FROM mambaorg/micromamba:2.5.0-ubuntu22.04 AS app
 
 # Version arguments
 # ARG variables only persist during build time
-ARG FREYJA_SOFTWARE_VERSION="2.0.3"
+ARG FREYJA_SOFTWARE_VERSION="2.0.2"
 ARG FREYJA_PATHOGEN="SARS-CoV-2"
 
 # build and run as root users since micromamba image has 'mambauser' set as the $USER
@@ -30,6 +30,7 @@ ENV PATH="/opt/conda/envs/freyja-env/bin:/opt/conda/envs/env/bin:${PATH}" \
 
 RUN micromamba create -n freyja-env -c conda-forge -c bioconda freyja=${FREYJA_SOFTWARE_VERSION} && \
     micromamba clean -a -y -f && \
+    pip install pandas==2.2.3 && \
     mkdir /data
 
 # update barcodes
