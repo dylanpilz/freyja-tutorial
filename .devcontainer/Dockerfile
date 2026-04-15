@@ -28,7 +28,7 @@ LABEL maintainer3.email="eriny@utah.gov"
 ENV PATH="/opt/conda/envs/freyja-env/bin:/opt/conda/envs/env/bin:${PATH}" \
     LC_ALL=C.UTF-8
 
-RUN micromamba create -n freyja-env -c conda-forge -c bioconda freyja=${FREYJA_SOFTWARE_VERSION} && \
+RUN micromamba create -n freyja-env -c conda-forge -c bioconda freyja=${FREYJA_SOFTWARE_VERSION} ivar=1.4.4 && \
     micromamba clean -a -y -f && \
     pip install pandas==2.2.3 && \
     mkdir /data

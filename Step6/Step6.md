@@ -1,4 +1,4 @@
-# Step 3: Visualize lineage abundances with freyja plot
+# Step 6: Visualize lineage abundances with freyja plot
 
 Now, we're ready to plot the relative lineage abundances of our samples over time. First, we'll need some information about how the samples were collected so that we can view them properly.
 

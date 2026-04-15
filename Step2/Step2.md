@@ -1,14 +1,11 @@
-# Step 2: Freyja Aggregation
+# Step 2: Sorting and Indexing with samtools
 
-You'll see the results from the last steps in the `demix` directory here. Before we're ready to plot our data, we'll need to combine the `demixed` files into one aggregate file that the plotting command can accept.
+You should now see trimmed.bam alongside your other files. Before we can proceed to the variant calling step, we'll need to sort and index the trimmed file. To do this, we'll have to run samtools sort on our newly created trimmed.bam. Name the output of this command trimmed.sorted.bam. (Note: if you see the output fill with random characters, try redirecting the output to a file using >)
 
-To do this, we'll run the following command:
-`freyja aggregate demix/ --output aggregated_results.tsv`
+`samtools sort trimmed.bam -o trimmed.sorted.bam`
 
-Let's break that down:
-- `demix/` is a positional argument specifying the directory with all our demix results
-- `--output aggregated_results.tsv` names the resulting output file
+Now, we'll need to index the sorted BAM file. To do this, we'll have to run samtools index on our newly created trimmed.sorted.bam.
 
-Go ahead and take a look at `aggregated_results.tsv` using your file browser. You'll notice that the relative abundances of each sample is listed on each row.
+`samtools index trimmed.sorted.bam`
 
-When you're ready, go ahead and `cd ../Step3`
+Now, we're ready to proceed to the variant calling step.
