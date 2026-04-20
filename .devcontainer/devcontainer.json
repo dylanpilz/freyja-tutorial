@@ -11,6 +11,11 @@
       ],
       "settings": {
         "editor.fontSize": 14
+      },
+      "codespaces": {
+        "openFiles": [
+          "README.md"
+        ]
       }
     }
   },

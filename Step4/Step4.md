@@ -7,7 +7,7 @@ Your goal is to run `freyja demix` on all these samples. First however, we need 
 
 `freyja update --pathogen MPX`
 
-After a few seconds, you should have the latest barcode set for Mpox. Now, go ahead and run:
+After a few seconds, you should have the latest barcode set for Mpox. Let's also create an output directory by running `mkdir demix`.  Now, go ahead and run:
 
 `freyja demix variants-output/reads0.tsv variants-output/reads0.depth --pathogen MPX --output demix/reads0.demixed`
 

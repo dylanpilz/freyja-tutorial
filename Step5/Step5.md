@@ -11,4 +11,4 @@ Let's break that down:
 
 Go ahead and take a look at `aggregated_results.tsv` using your file browser. You'll notice that the relative abundances of each sample is listed on each row.
 
-When you're ready, go ahead and `cd ../Step3`
+When you're ready, go ahead and `cd ../Step6`
